@@ -1,9 +1,5 @@
-<%@page import="java.util.*"%>
 <html>
 <body>
-<h1>Gofry</h1>
-<h2>Lista dostępnych gofrów</h2>
-
+<h2>Hello World!</h2>
 </body>
 </html>
-
