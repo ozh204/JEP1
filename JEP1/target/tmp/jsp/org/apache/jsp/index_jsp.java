@@ -47,8 +47,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
       out.write("<html>\n");
       out.write("<body>\n");
+      out.write("\n");
       out.write("<h1>Gofry</h1>\n");
-      out.write("<h2>Lista dostępnych gofrów</h2>\n");
+      out.write("\n");
+      out.write("<p><a href=\"lista\">Wypisz listę dostępnych gofrów</a></p>\n");
+      out.write("<p><a href=\"dodaj\">Dodaj swoje zamowienie</a></p>\n");
+      out.write("<p><a href=\"skladniki\">Sprawdź składniki poszczególnych produktów</a></p>\n");
       out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
