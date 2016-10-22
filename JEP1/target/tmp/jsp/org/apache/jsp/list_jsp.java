@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import domain.Waffle;
 
 public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +42,22 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\n');
+      out.write('\n');
+      service.WaffleTypes allWaffles = null;
+      synchronized (_jspx_page_context) {
+        allWaffles = (service.WaffleTypes) _jspx_page_context.getAttribute("allWaffles", PageContext.PAGE_SCOPE);
+        if (allWaffles == null){
+          allWaffles = new service.WaffleTypes();
+          _jspx_page_context.setAttribute("allWaffles", allWaffles, PageContext.PAGE_SCOPE);
+        }
+      }
+      out.write('\n');
+ allWaffles.initialize(); 
+      out.write("\n");
+      out.write("<style>\n");
+      out.write("    table,td{border:1px solid black;text-align:center;}\n");
+      out.write("</style>\n");
       out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
@@ -48,6 +65,22 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("<h2>Lista Gofrów</h2>\n");
+      out.write("\n");
+      out.write("<table>\n");
+      out.write("    <tr>\n");
+      out.write("        <td>Typ</td>\n");
+      out.write("        <td>Cena</td>\n");
+      out.write("    </tr>\n");
+      out.write("    ");
+
+        for (Waffle waffle : allWaffles.getAllWaffles())
+            out.println("<tr><td>" + waffle.getType() + "</td><td>" + waffle.getPrice() + " zł</td></tr>");
+    
+      out.write("\n");
+      out.write("</table>\n");
+      out.write("\n");
+      out.write("<p><a href=\"index.jsp\">Wróć</a></p>\n");
+      out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
