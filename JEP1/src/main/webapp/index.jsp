@@ -7,9 +7,9 @@
 
 <h1>Gofry</h1>
 
-<p><a href="lista">Wypisz listę dostępnych gofrów</a></p>
-<p><a href="dodaj">Dodaj swoje zamowienie</a></p>
-<p><a href="skladniki">Sprawdź składniki poszczególnych produktów</a></p>
+<p><a href="list.jsp">Wypisz listę dostępnych gofrów</a></p>
+<p><a href="add.jsp">Dodaj swoje zamowienie</a></p>
+<p><a href="ingredients.jsp">Sprawdź składniki poszczególnych produktów</a></p>
 
 </body>
 </html>
