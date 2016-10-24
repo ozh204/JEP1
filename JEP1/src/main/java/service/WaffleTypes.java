@@ -7,7 +7,7 @@ import domain.Waffle;
 
 public class WaffleTypes
 {
-    private final List<Waffle> types = initialize();// = new ArrayList<Waffle>();
+    private final List<Waffle> types = initialize();
     Waffle newWaffle;
 
     public List<Waffle> initialize()
