@@ -7,25 +7,29 @@ import domain.Waffle;
 
 public class WaffleTypes
 {
-    private List<Waffle> types = new ArrayList<Waffle>();
+    private final List<Waffle> types = initialize();// = new ArrayList<Waffle>();
     Waffle newWaffle;
 
-    public void initialize()
+    public List<Waffle> initialize()
     {
+    	List<Waffle> db = new ArrayList<Waffle>();
+    	
         newWaffle = new Waffle("Suchy", 3.5);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Z cukrem pudrem", 4);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Z polewą", 5);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Z owocami/śmietaną", 6);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną/owocami + polewą", 7.5);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną + owocami", 8.5);
-        types.add(newWaffle);
+        db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną + owocami + polewą", 10);
-        types.add(newWaffle);
+        db.add(newWaffle);
+        
+        return db;
     }
 
     public List<Waffle> getAllWaffles()

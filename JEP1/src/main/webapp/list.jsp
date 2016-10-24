@@ -1,7 +1,7 @@
 <%@page import="domain.Waffle"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="allWaffles" class="service.WaffleTypes" scope="page" />
-<% allWaffles.initialize(); %>
+<jsp:useBean id="allWaffles" class="service.WaffleTypes" scope="application" />
+
 <style>
     table,td{border:1px solid black;text-align:center;}
 </style>
