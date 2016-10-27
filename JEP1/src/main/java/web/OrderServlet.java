@@ -25,23 +25,23 @@ private static final long serialVersionUID = 1L;
 		out.println("<html><body><h2>Złóż zamówienie</h2>" +
 				"<form action='recent' method='POST'>" +
 				"Polewa:<br />" +
-				"<input type='radio' name='topping' value='none' checked>Bez polewy<br />" +
-				"<input type='radio' name='topping' value='chocolate'>Czekoladowa<br />" +
-				"<input type='radio' name='topping' value='toffi'>Toffi<br />" +
-				"<input type='radio' name='topping' value='raspberry'>Malinowa<br />" +
-				"<input type='radio' name='topping' value='blueberry'>Jagodowa<br />" +
-				"<input type='radio' name='topping' value='strawberry'>Truskawkowa<br />" +
+				"<input type='radio' name='topping' value='Brak' checked>Bez polewy<br />" +
+				"<input type='radio' name='topping' value='Czekoladowa'>Czekoladowa<br />" +
+				"<input type='radio' name='topping' value='Toffi'>Toffi<br />" +
+				"<input type='radio' name='topping' value='Malinowa'>Malinowa<br />" +
+				"<input type='radio' name='topping' value='Jagodowa'>Jagodowa<br />" +
+				"<input type='radio' name='topping' value='Truskawkowa'>Truskawkowa<br />" +
 				"Cukier puder:<br />" +
-				"<input type='radio' name='sugar' value='yes'>Tak<br />" +
-				"<input type='radio' name='sugar' value='no' checked>Nie<br />" +
+				"<input type='radio' name='sugar' value='Tak'>Tak<br />" +
+				"<input type='radio' name='sugar' value='Nie' checked>Nie<br />" +
 				"Śmietana :<br />" +
-				"<input type='radio' name='cream' value='yes'>Tak<br />" +
-				"<input type='radio' name='cream' value='no' checked>Nie<br />" +
+				"<input type='radio' name='cream' value='Tak'>Tak<br />" +
+				"<input type='radio' name='cream' value='Nie' checked>Nie<br />" +
 				"Owoce :<br />" +
-				"<input type='radio' name='fruit' value='none' checked>Bez owoców<br />" +
-				"<input type='radio' name='fruit' value='strawberry'>Truskawki<br />" +
-				"<input type='radio' name='fruit' value='raspberry'>Maliny<br />" +
-				"<input type='radio' name='fruit' value='blueberry'>Borówki<br />" +
+				"<input type='radio' name='fruit' value='Brak' checked>Bez owoców<br />" +
+				"<input type='radio' name='fruit' value='Truskawki'>Truskawki<br />" +
+				"<input type='radio' name='fruit' value='Maliny'>Maliny<br />" +
+				"<input type='radio' name='fruit' value='Borówki'>Borówki<br />" +
 				"<input type='submit' value=' OK ' />" +
 				"</form>" +
 				"</body></html>");

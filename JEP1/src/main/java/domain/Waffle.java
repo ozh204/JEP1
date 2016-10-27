@@ -6,6 +6,10 @@ public class Waffle
 {
     private String type = "Suchy";
     private double price = 3.5;
+    private String topping = "Brak";
+    private String sugar = "Brak";
+    private String cream = "Brak";
+    private String fruit = "Brak";
 
     public Waffle() {}
 
@@ -23,6 +27,24 @@ public class Waffle
     {
         return price;
     }
+    public String getSugar()
+    {
+        return sugar;
+    }
+    public String getTopping()
+    {
+        return topping;
+    }
+    public String getCream()
+    {
+        return cream;
+    }
+    public String getFruit()
+    {
+        return fruit;
+    }
+
+
 
     public void setType()
     {
@@ -40,13 +62,27 @@ public class Waffle
     {
         this.price = price;
     }
-    public void setPrice(boolean topping, boolean sugar, boolean cream, boolean fruit)
+    public void setPrice(String topping, String sugar, String cream, String fruit)
     {
-        if(topping) this.price += 1.5;
-        if(sugar) this.price += 0.5;
-        if(cream) this.price += 2.5;
-        if(fruit) this.price += 2.5;
-
-        setType();
+        if(!topping.equals("Brak"))
+        {
+            this.price += 1.5;
+            this.topping = topping;
+        }
+        if(sugar.equals("Tak"))
+        {
+            this.price += 0.5;
+            this.sugar = sugar;
+        }
+        if(cream.equals("Tak"))
+        {
+            this.price += 2.5;
+            this.cream = cream;
+        }
+        if(!fruit.equals("Brak"))
+        {
+            this.price += 2.5;
+            this.fruit = fruit;
+        }
     }
 }
