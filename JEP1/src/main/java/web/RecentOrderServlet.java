@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 import domain.Waffle;
 
 @WebServlet(urlPatterns = "/recent")
-public class RecentServlet extends HttpServlet  {
+public class RecentOrderServlet extends HttpServlet  {
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -29,13 +29,17 @@ public class RecentServlet extends HttpServlet  {
                 request.getParameter("fruit"));
         waffle.setType();
 
+
         out.println("<html><body><h2>Twoje zamówienie</h2>" +
-                "<p>Rodzaj: " + waffle.getType() + "<br />" +
-                "<p>Cukier puder: " + waffle.getSugar() + "<br />" +
-                "<p>Polewa: " + waffle.getTopping() + "<br />" +
-                "<p>Śmietana: " + waffle.getCream() + "<br />" +
-                "<p>Owoce: " + waffle.getFruit() + "<br />" +
-                "<p>Cena: " + waffle.getPrice() + " zł<br />" +
+                "<form action='agree' method='POST'" +
+                "<br />Rodzaj: " + waffle.getType() +
+                "<br />Cukier puder: " + waffle.getSugar() +
+                "<br />Polewa: " + waffle.getTopping() +
+                "<br />Śmietana: " + waffle.getCream() +
+                "<br />Owoce: " + waffle.getFruit() +
+                "<br />Cena: " + waffle.getPrice() + " zł" +
+                "<br /><input type='submit' value='Potwierdź'/>" +
+                "<a href='order'>Wróć</a>" +
                 "</body></html>");
         out.close();
     }
