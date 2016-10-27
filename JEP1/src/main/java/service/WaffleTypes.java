@@ -1,9 +1,9 @@
 package service;
 
+import domain.Waffle;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import domain.Waffle;
 
 public class WaffleTypes
 {
@@ -20,13 +20,21 @@ public class WaffleTypes
         db.add(newWaffle);
         newWaffle = new Waffle("Z polewą", 5);
         db.add(newWaffle);
+        newWaffle = new Waffle("Z polewą + cukrem pudrem", 5.5);
+        db.add(newWaffle);
         newWaffle = new Waffle("Z owocami/śmietaną", 6);
         db.add(newWaffle);
+        newWaffle = new Waffle("Z owocami/śmietaną + cukrem pudrem", 6.5);
+        db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną/owocami + polewą", 7.5);
+        db.add(newWaffle);
+        newWaffle = new Waffle("Ze śmietaną/owocami + polewą + cukrem pudrem", 8);
         db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną + owocami", 8.5);
         db.add(newWaffle);
         newWaffle = new Waffle("Ze śmietaną + owocami + polewą", 10);
+        db.add(newWaffle);
+        newWaffle = new Waffle("Ze śmietaną + owocami + polewą + cukrem pudrem", 10.5);
         db.add(newWaffle);
         
         return db;
