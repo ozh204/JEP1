@@ -1,10 +1,12 @@
 package web;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -29,18 +31,16 @@ public class RecentOrderServlet extends HttpServlet  {
                 request.getParameter("fruit"));
         waffle.setType();
 
-
-        out.println("<html><body><h2>Twoje zamówienie</h2>" +
-                "<form action='agree' method='POST'" +
+        out.println("<html><body><h2>Twoje zamówienie zostało dodane</h2>" +
                 "<br />Rodzaj: " + waffle.getType() +
                 "<br />Cukier puder: " + waffle.getSugar() +
                 "<br />Polewa: " + waffle.getTopping() +
                 "<br />Śmietana: " + waffle.getCream() +
                 "<br />Owoce: " + waffle.getFruit() +
                 "<br />Cena: " + waffle.getPrice() + " zł" +
-                "<br /><input type='submit' value='Potwierdź'/>" +
                 "<a href='order'>Wróć</a>" +
+                "<a href='order'>Pokaż inne zamówienia</a>" +
                 "</body></html>");
-        out.close();
+        out.close();   
     }
 }
