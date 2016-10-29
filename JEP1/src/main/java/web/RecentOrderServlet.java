@@ -1,6 +1,5 @@
 package web;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import domain.Waffle;
+import service.OrderStorage;
 
 @WebServlet(urlPatterns = "/recent")
 public class RecentOrderServlet extends HttpServlet  {
@@ -39,8 +39,10 @@ public class RecentOrderServlet extends HttpServlet  {
                 "<br />Owoce: " + waffle.getFruit() +
                 "<br />Cena: " + waffle.getPrice() + " zł" +
                 "<a href='order'>Wróć</a>" +
-                "<a href='order'>Pokaż inne zamówienia</a>" +
+                "<a href='showOrder'>Pokaż inne zamówienia</a>" +
                 "</body></html>");
-        out.close();   
+        out.close();
+
+        OrderStorage.addOrder(waffle);
     }
 }

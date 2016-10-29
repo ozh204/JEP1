@@ -1,20 +1,19 @@
 package service;
 
-import domain.Order;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderStorage {
-    private List<Order> orders = new ArrayList<Order>();
+import domain.Waffle;
 
-    public void addOrder(String type, double price, String topping)
+public class OrderStorage {
+    private static List<Waffle> orders = new ArrayList<Waffle>();
+
+    public static void addOrder(Waffle waffle)
     {
-        Order order = new Order(type,price,topping);
-        orders.add(order);
+        orders.add(waffle);
     }
 
-    public List<Order> getOrders()
+    public static List<Waffle> getOrders()
     {
         return orders;
     }
