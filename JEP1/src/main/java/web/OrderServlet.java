@@ -41,9 +41,10 @@ private static final long serialVersionUID = 1L;
 				"<input type='radio' name='fruit' value='Brak' checked>Bez owoców<br />" +
 				"<input type='radio' name='fruit' value='Truskawki'>Truskawki<br />" +
 				"<input type='radio' name='fruit' value='Maliny'>Maliny<br />" +
-				"<input type='radio' name='fruit' value='Borówki'>Borówki<br />" +
+				"<input type='radio' name='fruit' value='Jagody'>Jagody<br />" +
 				"<input type='submit' value=' OK ' />" +
 				"</form>" +
+				"<a href='showOrder'>Pokaż inne zamówienia</a>" +
 				"</body></html>");
 		out.close();
 	}

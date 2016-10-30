@@ -21,18 +21,28 @@ public class ShowOrderServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         int id = 0;
 
+        out.println("<html>");
         out.println("<style> table,td{border:1px solid black;text-align:center;} </style>");
-        out.println("<html><body><h2>Lista oczekujących zamówień</h2>" +
-                "<table><tr><td>Który w kolejce</td><td>Rodzaj</td><td>Cena</td><td>Cukier Puder</td><td>Śmietana</td><td>Owoce</td><td>Polewa</td></tr>");
+        out.println("<body>");
+        out.println("<h2>Lista oczekujących zamówień</h2>");
+        out.println("<form action='delete' method='POST'>");
+        out.println("<table>");
+        out.println("   <tr>");
+        out.println("       <td>Który w kolejce</td><td>Rodzaj</td><td>Cena</td><td>Cukier Puder</td><td>Śmietana</td><td>Owoce</td><td>Polewa</td><td>Usuń</td>");
+        out.println("   </tr>");
                 for (Waffle waffle : OrderStorage.getOrders())
-                    out.println("<tr><td>"+ ++id +"</td><td>" + waffle.getType() +
-                    "</td><td>" + waffle.getPrice() +
-                    " zł</td><td>" + waffle.getSugar() +
-                    "</td><td>" + waffle.getCream() +
-                    "</td><td>" + waffle.getFruit() +
-                    "</td><td>" + waffle.getTopping() +
-                    "</td></tr>");
-        out.println("</table></body></html>");
+                {
+                    out.println("<tr><td>" + ++id + "</td><td>" + waffle.getType() +
+                            "</td><td>" + waffle.getPrice() +
+                            " zł</td><td>" + waffle.getSugar() +
+                            "</td><td>" + waffle.getCream() +
+                            "</td><td>" + waffle.getFruit() +
+                            "</td><td>" + waffle.getTopping() +
+                            "</td><td><input type='checkbox' name='delete' value='" + id + "'></td><td><a href='modify?order=" + id + "'>Modfikuj</a></td></tr>");
+                }
+        out.println("</table>");
+        out.println("<input type='submit' value='Usuń zaznaczone'/>");
+        out.println("</form></body></html>");
         out.close();
     }
 }

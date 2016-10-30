@@ -1,6 +1,8 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import domain.Waffle;
@@ -8,7 +10,7 @@ import domain.Waffle;
 public class OrderStorage {
     private static List<Waffle> orders = new ArrayList<Waffle>();
 
-    public static void addOrder(Waffle waffle)
+    public void addOrder(Waffle waffle)
     {
         orders.add(waffle);
     }
@@ -16,5 +18,24 @@ public class OrderStorage {
     public static List<Waffle> getOrders()
     {
         return orders;
+    }
+
+    public static void deleteOrder(String[] list)
+    {
+        List<String> idList = new ArrayList<String>();
+        idList.addAll(Arrays.asList(list));
+        Collections.reverse(idList);
+
+        int id;
+        for(String a : idList)
+        {
+            id = Integer.parseInt(a);
+            orders.remove(id-1);
+        }
+    }
+
+    public void modifyOrder(Waffle waffle, String id)
+    {
+        orders.set(Integer.parseInt(id)-1,waffle);
     }
 }

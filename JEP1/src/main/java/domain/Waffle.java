@@ -7,8 +7,8 @@ public class Waffle
     private String type = "Suchy";
     private double price = 3.5;
     private String topping = "Brak";
-    private String sugar = "Brak";
-    private String cream = "Brak";
+    private String sugar = "Nie";
+    private String cream = "Nie";
     private String fruit = "Brak";
 
     public Waffle() {}
@@ -43,8 +43,6 @@ public class Waffle
     {
         return fruit;
     }
-
-
 
     public void setType()
     {
