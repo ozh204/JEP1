@@ -51,15 +51,6 @@ public class Waffle
             if(waffle.price == this.price) {this.type = waffle.getType();break;}
         }
     }
-    public void setType(String type)
-    {
-        this.type = type;
-    }
-    public void setPrice() {}
-    public void setPrice(double price)
-    {
-        this.price = price;
-    }
     public void setPrice(String topping, String sugar, String cream, String fruit)
     {
         if(!topping.equals("Brak"))
