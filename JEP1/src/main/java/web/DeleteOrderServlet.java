@@ -24,5 +24,8 @@ public class DeleteOrderServlet extends HttpServlet {
 
         out.print("Usunięto zamówienia o id");
         for(String a : items) out.print(" " + a);
+        out.println("<p><a href='showOrder'>Pokaż inne zamówienia</a></p>" +
+                "<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+                "<p><a href='index.jsp'>Strona główna</a></p>");
     }
 }

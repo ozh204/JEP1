@@ -45,7 +45,9 @@ private static final long serialVersionUID = 1L;
 				"<input type='submit' value=' OK ' />" +
 				"</form>" +
 				"<a href='showOrder'>Pokaż inne zamówienia</a>" +
-				"</body></html>");
+				"<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+				"<p><a href='index.jsp'>Strona główna</a></p>" +
+			"</body></html>");
 		out.close();
 	}
 }

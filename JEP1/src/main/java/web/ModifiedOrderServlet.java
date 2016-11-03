@@ -36,6 +36,9 @@ public class ModifiedOrderServlet extends HttpServlet {
                 "<br />Cena: " + waffle.getPrice() + " zł" +
                 "<a href='order'>Wróć</a>" +
                 "<a href='showOrder'>Pokaż inne zamówienia</a>" +
+                "<a href='showOrder'>Pokaż inne zamówienia</a>" +
+                "<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+                "<p><a href='index.jsp'>Strona główna</a></p>" +
                 "</body></html>");
         out.close();
 

@@ -38,8 +38,10 @@ public class RecentOrderServlet extends HttpServlet  {
                 "<br />Śmietana: " + waffle.getCream() +
                 "<br />Owoce: " + waffle.getFruit() +
                 "<br />Cena: " + waffle.getPrice() + " zł" +
-                "<a href='order'>Wróć</a>" +
-                "<a href='showOrder'>Pokaż inne zamówienia</a>" +
+                "<p><a href='order'>Wróć</a></p>" +
+                "<p><a href='showOrder'>Pokaż inne zamówienia</a></p>" +
+                "<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+                "<p><a href='index.jsp'>Strona główna</a></p>" +
                 "</body></html>");
         out.close();
 

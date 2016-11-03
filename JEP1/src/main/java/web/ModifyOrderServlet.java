@@ -52,6 +52,9 @@ public class ModifyOrderServlet extends HttpServlet {
                 "<input type='submit' value=' OK ' />" +
                 "</form>" +
                 "<a href='showOrder'>Pokaż inne zamówienia</a>" +
+                "<a href='showOrder'>Pokaż inne zamówienia</a>" +
+                "<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+                "<p><a href='index.jsp'>Strona główna</a></p>" +
                 "</body></html>");
         out.close();
     }

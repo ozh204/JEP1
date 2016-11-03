@@ -42,6 +42,10 @@ public class ShowOrderServlet extends HttpServlet {
                 }
         out.println("</table>");
         out.println("<input type='submit' value='Usuń zaznaczone'/>");
+        out.println("<p><a href='order'>Wróć</a></p>" +
+                "<p><a href='showOrder'>Pokaż inne zamówienia</a></p>" +
+                "<p><a href='list.jsp'>Wypisz listę dostępnych gofrów</a></p>" +
+                "<p><a href='index.jsp'>Strona główna</a></p>");
         out.println("</form></body></html>");
         out.close();
     }
