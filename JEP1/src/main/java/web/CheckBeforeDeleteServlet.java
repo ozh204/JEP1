@@ -30,7 +30,7 @@ public class CheckBeforeDeleteServlet extends HttpServlet {
         else
         {
             out.println("<h2>Gofr o takim id nie istnieje bądź nie wybrałeś żadnego</h2>");
-            getServletContext().getRequestDispatcher("/showOrder").include(request, response);
+            request.getRequestDispatcher("/showOrder").include(request, response);
         }
         out.close();
     }
