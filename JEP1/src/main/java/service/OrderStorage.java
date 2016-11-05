@@ -38,4 +38,17 @@ public class OrderStorage {
     {
         orders.set(Integer.parseInt(id)-1,waffle);
     }
+
+    public static boolean checkIfExists(String[] items)
+    {
+        if(items == null) return false;
+        int id;
+        for(String a : items)
+        {
+            id = Integer.parseInt(a);
+            if (orders.get(id-1) == null)
+                return false;
+        }
+        return true;
+    }
 }

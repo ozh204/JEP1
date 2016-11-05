@@ -25,7 +25,7 @@ public class ShowOrderServlet extends HttpServlet {
         out.println("<style> table,td{border:1px solid black;text-align:center;} </style>");
         out.println("<body>");
         out.println("<h2>Lista oczekujących zamówień</h2>");
-        out.println("<form action='delete' method='POST'>");
+        out.println("<form action='check' method='POST'>");
         out.println("<table>");
         out.println("   <tr>");
         out.println("       <td>Który w kolejce</td><td>Rodzaj</td><td>Cena</td><td>Cukier Puder</td><td>Śmietana</td><td>Owoce</td><td>Polewa</td><td>Usuń</td>");
@@ -48,5 +48,10 @@ public class ShowOrderServlet extends HttpServlet {
                 "<p><a href='index.jsp'>Strona główna</a></p>");
         out.println("</form></body></html>");
         out.close();
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        doGet(request,response);
     }
 }
